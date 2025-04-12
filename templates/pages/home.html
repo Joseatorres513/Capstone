@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome
+
+{% endblock %}
+{% load static %}
+{% block css %}
+    <link href="{% static 'css/home.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <h1>Welcome to the Home Page!</h1>
+    <p>This is the home page of our website.</p>
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'js/home.js' %}"></script>
+{% endblock %}
