@@ -1,0 +1,33 @@
+.note-list {
+    padding-top: 12px;
+}
+
+.note-list h1 {
+    text-align: center;
+    color: darkcyan;
+}
+
+.note-list .all-notes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.note-list .note-item {
+    background-color: white;
+    border: 1 px solid #5f8080;
+    border-radius: 5px;
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+.note-list .note-item label {
+    color: #a6b1b1;
+}
+
+.note-list .note-item img {
+    max-width: 100%;
+    margin-bottom: 6px;
+}

@@ -1,3 +1,5 @@
-venv/
+venv/*
+*__pycache__*
+.env
+staticfiles
 **/.env
-__pycache__/

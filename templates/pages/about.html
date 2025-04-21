@@ -1,4 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About - Jose A Torres{% endblock title %}
+
+{% block content %}
+<!-- About Me Section -->
+<section class="about-section">
+    <div class="about-container">
+
+        <!-- Left Side: Image -->
+        <div class="about-left">
+            <img src="{% static 'img/Headshot.png' %}" alt="Headshot of Jose" />
+        </div>
+
+        <!-- Right Side: Info -->
+        <div class="about-right">
+            <div class="about-text">
+                <h2>Jose A Torres</h2>
+                <h4 class="job-title">Security Analyst</h4>
 
 
-<h1>About me</h1>
-<h3>Jose Torres</h3>
+                <p>
+                    Army veteran and mission-driven professional with 10+ years of combined experience in Signals Intelligence (SIGINT), law enforcement/security, and software development. 
+                    Trusted to manage classified systems and support personnel with Top Secret/SCI clearances. 
+                    Adept at navigating the intelligence community, coordinating joint agency operations, and delivering real-time data tools using technologies like Python, Django, and JavaScript. 
+                    Committed to building secure, scalable solutions and enhancing national security infrastructure through development and analysis.
+                </p>
+
+                <p>
+                    Seeking a dynamic opportunity with a company with proven success by contributing and developing my unique skillsets, background, and expertise.
+                </p>
+
+                <h2>Skills</h2>
+                <div class="skills-list">
+                    <button class="btn skill">HTML</button>
+                    <button class="btn skill">CSS</button>
+                    <button class="btn skill">JavaScript</button>
+                    <button class="btn skill">Python</button>
+                    <button class="btn skill">Django</button>
+                    <button class="btn skill">VSCode</button>
+                    <button class="btn skill">Figma</button>
+                    <button class="btn skill">Ubuntu</button>
+                    <button class="btn skill">GitHub</button>
+                    <button class="btn skill">Agile</button>
+                    <button class="btn skill">Scrum</button>
+                    <button class="btn skill">Jira</button>
+                    <button class="btn skill">Confluence</button>
+                    <button class="btn skill">Trello</button>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+{% endblock content %}
