@@ -1,0 +1,124 @@
+/* 
+==========================
+base.css
+--------------------------
+Purpose:
+- Global resets and layout styles
+- Font settings and variables
+- Buttons (shared style)
+- Overlay styling (used on homepage)
+- Global image and typography layout
+==========================
+*/
+
+:root {
+    --primary-color: #000000;
+    --background-color: #A6A5AD;
+    --header-orange: #e64a20;
+    --text-light: #ffffff;
+    --lobster-font: "Lobster Two", sans-serif;
+    --DM-font: "DM Sans", sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-size: 16px;
+    background-color: var(--background-color);
+    font-family: var(--DM-font);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    color: var(--text-light);
+    font-family: var(--lobster-font);
+    font-size: 1.7rem;
+}
+
+/* Overlay Banner */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.overlay h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 6px black;
+}
+
+.overlay p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px black;
+}
+
+/* Shared Button Styles */
+button.skill,
+a.skill,
+a.btn.skill,
+button.btn.skill,
+.cta-button {
+    background-color: #ff6333;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-family: var(--DM-font);
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    margin: 0.3rem;
+}
+
+button.skill:hover,
+a.skill:hover,
+a.btn.skill:hover,
+button.btn.skill:hover,
+.cta-button:hover {
+    background-color: #e64a20;
+    transform: scale(1.05);
+    color: white;
+}

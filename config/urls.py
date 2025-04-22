@@ -23,6 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('pages.urls')),
     path('notes/', include('notes.urls')),
+    path('content/', include('content.urls')),
+
 ]
 
 # config to server images
