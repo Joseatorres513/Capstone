@@ -12,8 +12,17 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import certifi
 import environ
-import os  # <-- Add this line
+import os 
+import django_heroku 
+import dj_database_url 
 
+# Activate Django-Heroku.
+django_heroku.settings(locals())
+
+# Whitenoise for static file handling
+MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # create a secure connection
 os.environ["SSL_CERT_FILE"] = certifi.where()
@@ -61,6 +70,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Add this line
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -88,11 +98,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
+        conn_max_age=600
+    )
 }
+
 
 
 # Password validation
