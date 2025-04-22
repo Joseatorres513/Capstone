@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pages',
     'notes',
-    'content'
+    'content',
+    'coffee_blog',
 ]
 
 MIDDLEWARE = [

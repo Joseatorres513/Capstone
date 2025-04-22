@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Blog</title>
+    <link rel="stylesheet" href="{% static 'coffee_blog/mystyle.css' %}">
+</head>
+<body>
+    <header class="site-init">
+        <div class="menu-bar">
+            <h1>Coffee Blog</h1>
+            <nav class="menu">
+                <a href="{% url 'coffee_about' %}">About</a>
+                <a href="{% url 'coffee_courses' %}">Courses</a>
+                <a href="{% url 'coffee_contact' %}">Contact</a>
+            </nav>
+        </div>
+        <h2>Coffee Blog with tips and Courses</h2> 
+        <p>Learn from the experts with the best recipes and tips</p>
+    </header>
+
+    <main class="container">
+        <h2>Our Blog</h2>
+
+        <div>
+            <img src="{% static 'img/blog1.jpg' %}" alt="Coffee image">
+            <h3>Coffee Bean Types</h3>
+            <p>There are four main types of coffee beans: Arabica, Robusta, Liberica, and Excelsa. Arabica is the most popular and widely consumed due to its smooth flavor and balanced acidity.</p>
+            <a class="btn-read" href="#">Read More</a>
+        </div>
+
+        <div>
+            <img src="{% static 'img/blog2.jpg' %}" alt="Cup of coffee">
+            <h3>Coffee Brewing Methods</h3>
+            <p>From Italian espresso to Turkish cezve to the pour-over trend in Japan, every culture has its own brewing rituals. The method dramatically changes flavor, body, and caffeine strength.</p>
+            <a class="btn-read" href="#">Read More</a>
+        </div>
+
+        <div>
+            <img src="{% static 'img/blog3.jpg' %}" alt="Coffee beans">
+            <h3>Coffee Around the World</h3>
+            <p>In Ethiopia, coffee is part of a traditional ceremony. Finland consumes the most coffee per capita, while Brazil is the world’s largest coffee producer, exporting over 2.5 million metric tons a year.</p>
+            <a class="btn-read" href="#">Read More</a>
+        </div>
+    </main>
+
+    <footer>
+        <h1>Coffee Blog</h1>
+        <a class="btn-read3" href="{% url 'coffee_about' %}">About Us</a>
+        <a class="btn-read3" href="{% url 'coffee_courses' %}">Courses</a>
+        <a class="btn-read3" href="{% url 'coffee_contact' %}">Contact</a>
+    </footer>
+</body>
+</html>

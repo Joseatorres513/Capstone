@@ -76,3 +76,18 @@ Activate the venv
 Win: venv\Scripts\activate
 
 Mac: source venv/bin/activate
+
+- create your app
+- register the app on settings.py
+- create the urls.py
+- register the urls on config > urls.py
+
+- create your model
+- register the model on admin.py
+- migrations
+- create record on the admin module
+
+- list views, template, urls
+- test
+
+- create view, template, urls, forms

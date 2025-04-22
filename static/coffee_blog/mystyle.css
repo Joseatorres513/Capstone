@@ -1,0 +1,23 @@
+/* Global Centering Styles */
+h1, h2, h3, p {
+    text-align: center;
+}
+
+/* Center main containers */
+.container, .contact-container, .course-item {
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Center images */
+.about-img, .contact-img, .course-item img, .container img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Center buttons */
+.btn-read, .btn-read3 {
+    display: inline-block;
+    margin: 0.5rem auto;
+    text-align: center;
+}

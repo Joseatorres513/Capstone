@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Create New Note - Jose A Torres{% endblock %}
+
+{% load static %}
+{% block css %}
+    <link href="{% static 'css/note-create.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<section class="note-section">
+    <div class="note-container">
+        <h2 class="section-title">Create a New Note</h2>
+
+        <form method="post" enctype="multipart/form-data" class="note-form">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="id_title">Title</label>
+                {{ form.title }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_image">Image</label>
+                {{ form.image }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_content">Content</label>
+                {{ form.content }}
+            </div>
+
+            <button type="submit" class="btn btn-primary">Save Note</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

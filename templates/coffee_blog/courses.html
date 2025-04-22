@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Coffee Blog</title>
+    <link rel="stylesheet" href="{% static 'coffee_blog/mystyle.css' %}">
+</head>
+<body>
+
+    <header class="site-init">
+        <div class="menu-bar">
+            <h1>Coffee Blog</h1>
+            <nav class="menu">
+                <a href="{% url 'coffee_about' %}">About</a>
+                <a href="{% url 'coffee_courses' %}">Courses</a>
+                <a href="{% url 'coffee_contact' %}">Contact</a>
+            </nav>
+        </div>
+        <h2>Master Your Brew</h2> 
+        <p>Join coffee courses designed for both curious beginners and passionate pros.</p>
+    </header>
+
+    <main class="container">
+
+        <h2 class="about-title">Our Coffee Courses</h2>
+
+        <div class="course-item">
+            <img src="{% static 'img/course1.jpg' %}" alt="Barista Basics">
+            <h3>Barista Basics</h3>
+            <p>Learn how to make the perfect espresso, steam milk like a pro, and build beautiful lattes. This hands-on course is your first step toward café-level skills.</p>
+        </div>
+
+        <div class="course-item">
+            <img src="{% static 'img/course2.jpg' %}" alt="World Brewing Methods">
+            <h3>World Brewing Methods</h3>
+            <p>Explore the pour-over in Japan, siphon brewing in Taiwan, Turkish ibrik techniques, and the French press. Coffee is global — learn to brew like it.</p>
+        </div>
+
+        <div class="course-item">
+            <img src="{% static 'img/course3.jpg' %}" alt="Coffee Tasting & Pairing">
+            <h3>Coffee Tasting & Pairing</h3>
+            <p>Develop your palate with professional cupping techniques and discover how chocolate, citrus, and spice notes shine with the right pairing.</p>
+        </div>
+
+    </main>
+
+    <footer>
+        <h1>Coffee Blog</h1>
+        <a class="btn-read3" href="{% url 'coffee_about' %}">About Us</a>
+        <a class="btn-read3" href="{% url 'coffee_courses' %}">Courses</a>

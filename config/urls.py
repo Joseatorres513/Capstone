@@ -24,6 +24,7 @@ urlpatterns = [
     path('', include('pages.urls')),
     path('notes/', include('notes.urls')),
     path('content/', include('content.urls')),
+    path('coffee_blog/', include('coffee_blog.urls')),
 
 ]
 

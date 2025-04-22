@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Coffee Blog</title>
+    <link rel="stylesheet" href="{% static 'coffee_blog/mystyle.css' %}">
+</head>
+<body>
+
+    <header class="secondary">
+        <div class="menu-bar">
+            <h1 class="main-title">Coffee Blog</h1>
+            <nav class="menu">
+                <a href="{% url 'coffee_about' %}">About</a>
+                <a href="{% url 'coffee_courses' %}">Courses</a>
+                <a href="{% url 'coffee_contact' %}">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h2>Let's Connect</h2>
+        <p class="container">Got a coffee question, story, or collaboration idea? We'd love to hear from you. Use the form below or reach out directly — we're always brewing something new!</p>
+
+        <div class="contact-container container">
+
+            <div class="contact-img">
+                <img src="{% static 'img/contact.jpg' %}" alt="Contact">
+            </div>
+
+            <div class="contact-form container">
+                <div class="input-container">
+                    <label>Name:</label>
+                    <input type="text" placeholder="Enter your name">
+                </div>
+                <div class="input-container">
+                    <label>Email:</label>
+                    <input type="email" placeholder="Enter your email">
+                </div>
+                <div class="input-container">
+                    <label>Subject:</label>
+                    <input type="text" placeholder="What's this about?">
+                </div>
+                <div class="input-container">
+                    <label>Message:</label>
+                    <textarea placeholder="Your message here..."></textarea>
+                </div>
+            </div>
+
+            <div class="contact-btn">
+                <button class="btn-read">Send Message</button>
+            </div>
+        </div>
+
+        <section class="container" style="margin-top: 3rem;">
+            <h3>Contact Details</h3>
+            <p><strong>Email:</strong> contact@coffeeblog.com</p>
+            <p><strong>Phone:</strong> +1 (555) 987-6543</p>
+            <p><strong>Location:</strong> 123 Roast Street, Brewtown, USA</p>
+
+            <div style="margin-top: 2rem;">
+                <img src="{% static 'img/map-placeholder.jpg' %}" alt="Map location" style="max-width: 100%; border-radius: 10px;">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h1>Coffee Blog</h1>
+        <a class="btn-read3" href="{% url 'coffee_about' %}">About Us</a>
+        <a class="btn-read3" href="{% url 'coffee_courses' %}">Courses</a>
+        <a class="btn-read3" href="{% url 'coffee_contact' %}">Contact</a>
+    </footer>
+
+</body>
+</html>

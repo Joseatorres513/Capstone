@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Coffee Blog</title>
+    <link rel="stylesheet" href="{% static 'coffee_blog/mystyle.css' %}">
+</head>
+<body>
+
+    <header class="site-init">
+        <div class="menu-bar">
+            <h1>Coffee Blog</h1>
+            <nav class="menu">
+                <a href="{% url 'coffee_about' %}">About</a>
+                <a href="{% url 'coffee_courses' %}">Courses</a>
+                <a href="{% url 'coffee_contact' %}">Contact</a>
+            </nav>
+        </div>
+        <h2>Coffee Blog with Tips and Courses</h2> 
+        <p>Learn from the experts with the best recipes and brewing methods</p>
+    </header>
+
+    <main class="container">
+        <h2 class="about-title">About Us</h2>
+        
+        <div class="about-img">
+            <img src="{% static 'img/us.jpg' %}" alt="About Coffee Blog">
+        </div>
+
+        <div>
+            <p>Welcome to <strong>Coffee Blog</strong> — where every bean tells a story. We’re not just about caffeine; we’re about culture, craft, and the magic that happens when people gather around a cup. Our mission? To brew knowledge, flavor, and global experiences into every post.</p>
+
+            <p>Whether you're sipping espresso in Rome, enjoying Turkish coffee under the sun, or cozying up with a dark roast in Seattle — coffee connects the world. We explore those rich traditions, hidden brewing techniques, and bold flavors that make each cup more than just a morning habit — it’s a lifestyle.</p>
+
+            <p>Here, you’ll meet growers, baristas, roasters, and everyday enthusiasts who make up the heartbeat of the coffee world. From slow pours to fast shots, from Colombian farms to Scandinavian fika, we celebrate coffee’s roots, evolution, and future — one post at a time.</p>
+        </div>
+    </main>
+
+    <footer>
+        <h1>Coffee Blog</h1>
+        <a class="btn-read3" href="{% url 'coffee_about' %}">About Us</a>
+        <a class="btn-read3" href="{% url 'coffee_courses' %}">Courses</a>
+        <a class="btn-read3" href="{% url 'coffee_contact' %}">Contact</a>
+    </footer>
+
+</body>
+</html>
