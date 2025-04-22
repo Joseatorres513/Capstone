@@ -16,13 +16,7 @@ import os
 import django_heroku 
 import dj_database_url 
 
-# Activate Django-Heroku.
-django_heroku.settings(locals())
 
-# Whitenoise for static file handling
-MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # create a secure connection
 os.environ["SSL_CERT_FILE"] = certifi.where()
@@ -161,3 +155,9 @@ EMAIL_USE_SSL = False
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = env("SMTP_EMAIL")
 EMAIL_HOST_PASSWORD = env("SMTP_PASS")
+
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
