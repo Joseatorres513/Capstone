@@ -11,16 +11,17 @@
         {% for project in projects %}
         <div class="project-card">
 
+            {# Prioritize live link as the main image link #}
             {% if project.live_link %}
-            <a href="{{ project.live_link }}" target="_blank">
-                <img src="{{ project.image.url }}" alt="{{ project.name }}">
-            </a>
+                <a href="{{ project.live_link }}" target="_blank">
+                    <img src="{{ project.image.url }}" alt="{{ project.name }}">
+                </a>
             {% elif project.repository %}
-            <a href="{{ project.repository }}" target="_blank">
-                <img src="{{ project.image.url }}" alt="{{ project.name }}">
-            </a>
+                <a href="{{ project.repository }}" target="_blank">
+                    <img src="{{ project.image.url }}" alt="{{ project.name }}">
+                </a>
             {% else %}
-            <img src="{{ project.image.url }}" alt="{{ project.name }}">
+                <img src="{{ project.image.url }}" alt="{{ project.name }}">
             {% endif %}
 
             <h3>{{ project.name }}</h3>
@@ -33,6 +34,16 @@
                 {% empty %}
                 <span class="text-label">No skills listed</span>
                 {% endfor %}
+            </div>
+
+            {# Optional: Show both links as buttons #}
+            <div class="project-buttons">
+                {% if project.live_link %}
+                <a href="{{ project.live_link }}" target="_blank" class="btn btn-sm">View Live</a>
+                {% endif %}
+                {% if project.repository %}
+                <a href="{{ project.repository }}" target="_blank" class="btn btn-sm">View Code</a>
+                {% endif %}
             </div>
 
         </div>
