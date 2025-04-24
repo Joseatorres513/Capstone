@@ -15,7 +15,8 @@ class Project(models.Model):
     year = models.IntegerField()
     image = models.ImageField(upload_to="static/img/")
     repository = models.URLField()
+    live_link = models.URLField(blank=True, null=True)  # ✅ Add this line
     skills = models.ManyToManyField(Skill)
 
     def __str__(self):
-        return self.name  # 👈 So the admin panel or templates can show project names clearly
+        return self.name
