@@ -25,30 +25,53 @@ Purpose:
         padding: 1rem;
     }
 
-    .header-left-side {
-        width: 100%;
+    .nav-header {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .nav-title {
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .nav-title a {
+        color: var(--text-light);
+        text-decoration: none;
+    }
+
+    .nav-btn {
+        display: block;
+        width: 28px;
+        height: 22px;
+        cursor: pointer;
+        padding: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .nav-btn span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: var(--text-light);
+        border-radius: 2px;
     }
 
     .header-right-side {
         width: 100%;
-        align-items: flex-start;
         background-color: var(--header-orange);
     }
 
-    nav {
-        width: 100%;
-    }
-
     .nav-options {
-        margin: 2rem 0px;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
+        margin: 0;
     }
 
     .nav-options a {
@@ -60,6 +83,7 @@ Purpose:
         font-weight: bold;
         font-size: 1.1rem;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        white-space: nowrap;
     }
 
     .nav-options a:hover {
@@ -67,29 +91,10 @@ Purpose:
         border-bottom: solid 2px white;
     }
 
-    /* Hamburger Button (Toggle) */
-    .nav-btn {
-        display: block;
-        width: 28px;
-        height: 22px;
-        cursor: pointer;
-        padding: 0.5rem;
-    }
-
-    .nav-btn span {
-        display: block;
-        height: 3px;
-        width: 100%;
-        background-color: var(--text-light);
-        border-radius: 2px;
-    }
-
-    /* Hide checkbox input */
     #nav-check {
         display: none;
     }
 
-    /* Toggle logic: hide/show .header-right-side */
     #nav-check:not(:checked) ~ .header-right-side {
         display: none;
     }
@@ -109,6 +114,41 @@ Purpose:
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+
+    .nav-title {
+        white-space: nowrap;
+        font-size: 1.8rem;
+        font-weight: bold;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .header-right-side {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 1rem;
+        padding-top: 0.5rem;
+    }
+
+    .nav-options a {
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+
+    header {
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 }
 
@@ -150,5 +190,59 @@ Purpose:
     .headshot img {
         width: 400px;
         height: 400px;
+    }
+}
+
+/* Tablet and Desktop Header Fix */
+@media (min-width: 641px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 1rem 2rem;
+    }
+
+    .nav-header {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-title {
+        font-size: 1.8rem;
+        font-weight: bold;
+        white-space: nowrap;
+        margin-right: 2rem;
+    }
+
+    .nav-title a {
+        color: var(--text-light);
+        text-decoration: none;
+    }
+
+    .header-right-side.nav-options {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .header-right-side.nav-options a {
+        font-size: 1rem;
+        color: var(--text-light);
+        text-decoration: none;
+        font-weight: bold;
+        padding: 0.5rem 0;
+        white-space: nowrap;
+    }
+
+    .header-right-side.nav-options a:hover {
+        color: #ffb199;
+    }
+
+    .nav-btn {
+        display: none;
     }
 }
