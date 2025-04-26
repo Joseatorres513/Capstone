@@ -108,7 +108,7 @@ button.btn.skill,
     border: none;
     cursor: pointer;
     display: inline-block;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
     margin: 0.3rem;
 }
@@ -121,4 +121,67 @@ button.btn.skill:hover,
     background-color: #e64a20;
     transform: scale(1.05);
     color: white;
+}
+
+/* Global Header/NavBar Styles */
+header {
+    background-color: var(--header-orange);
+    height: 60px;
+    position: sticky;
+    top: 0px;
+    padding: 1rem 2rem;
+    color: var(--text-light);
+    justify-content: center;
+    display: flex;
+    font-family: 'Lobster Two', cursive;
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+}
+
+.nav-title a {
+    font-weight: 600;
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+    color: #fff !important;
+    font-family: 'Lobster Two', cursive;
+}
+
+.header-right-side {
+    width: 70%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-right-side a {
+    font-family: 'Lobster Two', cursive;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
+}
+
+.header-right-side a:hover {
+    border-bottom: solid 2px white;
+}
+
+/* Hamburger */
+.nav-btn {
+    display: none;
+}
+
+.nav-btn span {
+    width: 30px;
+    background-color: white;
+    height: 3px;
+    margin: 6px auto;
+    display: block;
 }

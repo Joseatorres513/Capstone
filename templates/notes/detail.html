@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Note Details{% endblock title %}
+
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/note-details.css' %}">
+{% endblock css %}
+
+{% block content %}
+<div class="note-detail">
+    <h1>{{ note.title }}</h1>
+
+    <div class="parent">
+        {% if note.image %}
+        <img scr="{{note.image.url}}">
+        {% endif %}
+
+        <p>
+            {{note.content}}
+        </p>
+    </div>
+
+
+    <div class="controls">
+        <a class="btn btn-primary" href="{% url 'notes_update' note.id %}">Update Note</a>
+
+        <a class="btn btn-sm btn-danger" href="{% url 'notes_delete' note.id %}">Delete Note</a>
+    </div>
+
+</div>
+{% endblock %}

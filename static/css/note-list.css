@@ -62,3 +62,22 @@ Purpose:
     line-height: 1.5;
     color: var(--primary-color);
 }
+
+/* New Button Style: Orange Buttons */
+
+.orange-btn {
+    all: unset; /* reset ALL styles */
+    background-color: var(--header-orange);
+    color: white;
+    padding: 0.7rem 1.4rem;
+    border-radius: 10px;
+    font-family: var(--DM-font); /* OPTIONAL: if you want same font */
+    font-size: 1rem;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+

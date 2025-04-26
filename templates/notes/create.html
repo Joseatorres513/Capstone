@@ -10,7 +10,7 @@
 {% block content %}
 <section class="note-section">
     <div class="note-container">
-        <h2 class="section-title">Create a New Note</h2>
+        <h2>{{form_title}}</h2>
 
         <form method="post" enctype="multipart/form-data" class="note-form">
             {% csrf_token %}
