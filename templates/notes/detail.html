@@ -26,7 +26,27 @@
         <a class="btn btn-primary" href="{% url 'notes_update' note.id %}">Update Note</a>
 
         <a class="btn btn-sm btn-danger" href="{% url 'notes_delete' note.id %}">Delete Note</a>
+    
     </div>
 
+    <div class="comments">
+        {% for cmt in comments %}
+        <div class="comment">
+            <label class="user">{{ cmt.user.username }}</label>
+            <p>{{ cmt.content }}</p>
+            <label class="date">{{cmt.created_on}}</label>
+        </div>
+        {% endfor %}
+
+            <div class="comment">
+                <form method="post" action=""{% url 'create_comment' %}"">
+                    {% csrf_token %}
+                    <label class="user">Create new comment</label>
+                    <input type="hidden" name="note_id" value="{{note.id}}">
+                    <textarea name="content" rows="3"></textarea>
+                    <button class="btn btn-sm btn-outline-info">Save</button>
+                </form>
+            </div>
+    </div>
 </div>
 {% endblock %}
