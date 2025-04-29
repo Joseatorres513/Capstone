@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'notes',
     'content',
     'coffee_blog',
+    'online_store',
 ]
 
 MIDDLEWARE = [
