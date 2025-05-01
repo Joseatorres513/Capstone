@@ -22,7 +22,7 @@
                 </p>
                 <br>
                 <p>
-                    In my current role as a Security Analyst at the Pentagon with ARLO Solutions, I conduct comprehensive personnel clearance reviews, deliver SCI briefings, and manage secure systems like SharePoint and NIPRnet.
+                    In my current role as a Security Analyst at the Pentagon with Arlo Solutions, I conduct comprehensive personnel clearance reviews, deliver SCI briefings, and manage secure systems like SharePoint and NIPRnet.
                     I also contribute to digital operations by editing classified forms, updating internal HTML files, and participating in security best practice discussions across agencies.
                 </p>
                 <br>
@@ -31,7 +31,10 @@
                     I developed internal tools using Python, Flask, Django, and JavaScript, built RESTful APIs, and deployed interactive SIGINT maps using Leaflet.js and Mapbox.
                     I also trained soldiers and collaborated with multi-agency teams on secure, scalable mission technology.
                 </p>
-
+                <br>
+                <br>
+                <br>
+                <br>
                 <h2>Skills</h2>
                 <div class="skills-list">
                     <button class="btn skill">HTML</button>
@@ -56,26 +59,28 @@
     </div>
 </section>
 
+<hr class="section-divider">
 
 <!-- 🔗 PROJECTS PREVIEW -->
 <section id="projects" class="projects-section">
     <h2 class="projects-title">Projects</h2>
     <div class="projects-list">
         <div class="project-card">
-            <img src="{% static 'img/headshot.png' %}" alt="Project Preview" />
+            <img src="{% static 'img/spalding.jpg' %}" alt="Project Preview" />
             <h3>Online Store</h3>
             <p>Basketball Central!</p>
             <a href="{% url 'projects_list' %}" class="cta-button">See More</a>
         </div>
         <div class="project-card">
+            <img src="{% static 'img/course2.jpg' %}" alt="Project Preview" />
             <h3>Coffee_blog</h3>
             <p>This very site, built with Django, HTML, and CSS.</p>
             <a href="{% url 'projects_list' %}" class="cta-button">See More</a>
         </div>
-        <!-- Add 1 more preview if you want -->
     </div>
 </section>
 
+<hr class="section-divider">
 
 <!-- 🔗 EXPERIENCE PREVIEW -->
 <section id="experience" class="experience-section">
@@ -84,11 +89,14 @@
     <div class="experience-timeline">
         <div class="experience-item">
             <h3>Intelligence and Security Analyst – Pentagon, VA</h3>
-            <p>ARLO Solutions | September 2024 – Present</p>
+            <br>
+            <h4>Arlo Solutions | September 2024 – Present</h4>
+            <br>
             <p>
                 Serve as a Security Analyst supporting the Office of the Under Secretary of Defense for Intelligence and Security. Responsibilities include conducting 
                 Top-Secret SCI clearance reviews, delivering classified briefings and indoctrinations, verifying access credentials, and managing classified documentation.
             </p>
+            <br>
             <p>
                 I routinely manage clearance validations, classified visitation requests, and updates to secure portals like SharePoint and NIPRnet. I handle personnel records with PII,
                 edit internal systems and PDF forms, and contribute to internal HTML documentation — ensuring secure, accurate, and efficient workflows across government systems.
@@ -96,12 +104,15 @@
         </div>
 
         <div class="experience-item">
-            <h3>Signals Intelligence Analyst / SIGINT Planner – Fort Belvoir, VA & Fort Eisenhower, GA</h3>
-            <p>United States Army | August 2016 – September 2024</p>
+            <h3>Signals Intelligence Analyst / SIGINT Planner – Fort Eisenhower, GA & Fort Belvoir, VA</h3>
+            <br>
+            <h4>United States Army | May 2016 – September 2024</h4>
+            <br>
             <p>
                 Led planning and execution of SIGINT operations across joint intelligence missions supporting both tactical and strategic objectives. Delivered timely, high-value SIGINT to national-level decision makers and partner agencies.
                 Produced over 2,800 SIGINT reports and more than 100 high-priority TGRAMs in support of active mission sets.
             </p>
+            <br>
             <p>
                 Designed and implemented real-time alert systems and interactive mission maps using Python, Flask, and Django. Built RESTful APIs, integrated Mapbox and Leaflet.js for terrain analysis, and partnered with data teams to manage ingestion and formatting of raw intelligence data.
                 Trained and mentored soldiers on mission tools, technical requirements, and secure systems across multiple operations and deployments.
@@ -112,15 +123,26 @@
     <a href="{% url 'experience' %}" class="btn skill">View Full Experience</a>
 </section>
 
+<hr class="section-divider">
 
-<!-- 🔗 CONTACT PREVIEW -->
+<!-- 🔗 CONTACT -->
 <section id="contact" class="contact-section">
     <h2 class="projects-title">Contact Me</h2>
-    <p>Email: Joseatorres513@gmail.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/jose-a-torres513/" target="_blank">Jose A Torres</a></p>
-    <p>GitHub: <a href="https://github.com/Joseatorres513?tab=repositories" target="_blank">Joseatorres513</a></p>
-    <p>Phone: <a href="tel:+1-407-487-0498">+1 (407) 487-0498</a></p>
-    <p>Location: Alexandria, Virginia, DMV Area</p>
-    <a href="{% url 'contact' %}" class="btn skill">Reach Out</a>
+
+    <div class="contact-row">
+        <div class="contact-item">
+            📧 <strong>Email:</strong> Joseatorres513@gmail.com
+        </div>
+        <div class="contact-item">
+            📍 <strong>Location:</strong> Alexandria, Virginia, DMV Area
+        </div>
+        <div class="contact-item">
+            💼 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jose-a-torres513/" target="_blank">Jose A Torres</a>
+        </div>
+        <div class="contact-item">
+            🐙 <strong>GitHub:</strong> <a href="https://github.com/Joseatorres513" target="_blank">Joseatorres513</a>
+        </div>
+    </div>
+    <div class="contact-footer-strip"></div>
 </section>
 {% endblock content %}

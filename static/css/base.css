@@ -145,11 +145,13 @@ header {
 
 .nav-title a {
     font-weight: 600;
-    font-size: 1.25rem;
-    letter-spacing: 0.5px;
+    font-size: 1.4rem;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
     color: #fff !important;
     font-family: 'Lobster Two', cursive;
 }
+
 
 .header-right-side {
     width: 70%;
