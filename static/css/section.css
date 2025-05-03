@@ -344,3 +344,12 @@ Purpose:
     margin: 4rem auto;
     width: 80%;
 }
+
+.content-wrapper {
+    background-color: rgba(255, 255, 255, 0.9);  /* slightly transparent white */
+    padding: 2rem;
+    border-radius: 16px;
+    max-width: 1200px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

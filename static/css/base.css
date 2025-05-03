@@ -27,8 +27,14 @@ body {
     overflow-x: hidden;
     font-size: 16px;
     background-color: var(--background-color);
+    background-image: url("../img/grey.jpg"); /* ✅ adjust path if needed */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     font-family: var(--DM-font);
 }
+
 
 * {
     padding: 0;
@@ -196,4 +202,13 @@ header {
 .nav-title {
     margin-right: 1.5rem;
     flex-shrink: 0; /* ensures spacing isn't squeezed on smaller widths */
+}
+
+.content-wrapper {
+    background-color: rgba(255, 255, 255, 0.9); /* semi-transparent white */
+    padding: 2rem;
+    border-radius: 16px;
+    max-width: 1200px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* soft shadow */
 }
