@@ -48,6 +48,16 @@
     </header>
 
     <main class="container px-4 py-5">
+
+        <a href="#" class="scroll-to-top skill" id="scrollToTop">↑ Top</a>
+
+<script>
+    document.getElementById("scrollToTop").addEventListener("click", function (e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+</script>
+
         {% block content %}{% endblock %}
     </main>
 

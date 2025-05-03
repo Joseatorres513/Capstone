@@ -185,12 +185,12 @@ Purpose:
 .contact-section p {
     font-size: 1.1rem;
     margin-bottom: 1rem;
-    color: var(--text-light);
+    color: var(--text-dark);
     font-family: var(--DM-font);
 }
 
 .contact-section a {
-    color: var(--text-light);
+    color: var(--text-dark);
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -210,8 +210,9 @@ Purpose:
 
 /* Experience Section */
 .experience-background {
-    background-color: var(--background-color);
+    background-color: transparent; /*  Do NOT override background */
 }
+
 
 .experience-section {
     padding: 4rem 2rem;
@@ -265,7 +266,7 @@ Purpose:
    ========================== */
 .contact-section {
     background-color: var(--background-color);
-    color: white;
+    color: black;
     padding: 4rem 2rem;
     text-align: center;
 }
@@ -345,11 +346,15 @@ Purpose:
     width: 80%;
 }
 
-.content-wrapper {
-    background-color: rgba(255, 255, 255, 0.9);  /* slightly transparent white */
-    padding: 2rem;
-    border-radius: 16px;
-    max-width: 1200px;
-    margin: 2rem auto;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+/* Remove solid backgrounds from homepage sections */
+#about,
+#experience,
+#projects,
+#contact,
+.home-banner,
+.overlay,
+.about-section,
+.contact-section,
+.experience-section {
+    background-color: transparent !important;
 }
