@@ -150,6 +150,7 @@ header {
     white-space: nowrap;
     color: #fff !important;
     font-family: 'Lobster Two', cursive;
+    
 }
 
 
@@ -190,4 +191,9 @@ header {
 .hamburger span {
     background-color: #fff;
     /* white bars */
+}
+
+.nav-title {
+    margin-right: 1.5rem;
+    flex-shrink: 0; /* ensures spacing isn't squeezed on smaller widths */
 }

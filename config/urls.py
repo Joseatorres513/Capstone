@@ -26,7 +26,7 @@ urlpatterns = [
     path('content/', include('content.urls')),
     path('coffee_blog/', include('coffee_blog.urls')),
     path('online_store/', include('online_store.urls')),
-
+    path('users/', include('users.urls')),
 ]
 
 # config to server images
