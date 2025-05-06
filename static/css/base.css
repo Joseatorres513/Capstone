@@ -49,17 +49,14 @@ img {
     height: auto;
 }
 
-/* ✅ Updated paragraph styling */
 p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.6;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 0 1rem;
     text-align: justify;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    max-width: 100%;
 }
+
 
 @media (max-width: 768px) {
     p {
