@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %} Profile {% endblock %}
+
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/update.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="profile">
+
+    <h1>{{profile.user.username}}</h1>
+    <div clasee="info">
+        <label>{{profile.user.first_name}}</label>
+        <label>{{profile.user.last_name}}</label>
+    </div>
+
+    <div>
+        {% if profile.picture %}
+        <img src="{{ profile.picture.url }}" >
+        {% endif %}
+
+        <label>{{profile.phone_number}}</label>
+
+    </div>
+
+</div>
+
+{% endblock %}
