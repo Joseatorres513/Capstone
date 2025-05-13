@@ -60,6 +60,7 @@ Purpose:
 }
 
 /* Skills Section */
+
 .skills-title {
     color: var(--header-orange);
     margin-top: 1.5rem;
@@ -71,7 +72,7 @@ Purpose:
     margin-top: 1.5rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 0.75rem;
 }
 
@@ -200,6 +201,7 @@ Purpose:
     color: #ffffffdd;
     text-decoration: underline;
 }
+
 .contact-footer-strip {
     background-color: var(--header-orange);
     height: 8px;
@@ -210,7 +212,8 @@ Purpose:
 
 /* Experience Section */
 .experience-background {
-    background-color: transparent; /*  Do NOT override background */
+    background-color: transparent;
+    /*  Do NOT override background */
 }
 
 
@@ -241,6 +244,7 @@ Purpose:
     color: var(--header-orange);
     font-size: 1.25rem;
     margin-bottom: 0.3rem;
+    text-align: center;
 }
 
 .experience-location {
@@ -248,6 +252,7 @@ Purpose:
     font-weight: 500;
     margin-bottom: 1rem;
     color: var(--primary-color);
+    text-align: center;
 }
 
 .experience-item ul {
@@ -260,6 +265,52 @@ Purpose:
     font-size: 1rem;
     color: var(--primary-color);
 }
+
+.experience-location.about-text p {
+    text-align: center;
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.experience-item {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ccc;
+}
+
+p.experience-location {
+    text-align: center;
+}
+
+.experience-entry ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.experience-entry ul li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.experience-entry ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.65rem;
+    width: 10px;
+    height: 10px;
+    background-color: #e64a20;
+    border-radius: 50%;
+}
+
+
+
 
 /* ==========================
    Contact Section Styling
@@ -285,12 +336,18 @@ Purpose:
 
 .contact-item {
     background-color: #fff;
-    color: #333; /* Or use var(--primary-color) */
+    color: #333;
+    /* Or use var(--primary-color) */
     padding: 0.5rem 1rem;
     border-left: 4px solid orange;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     border-radius: 6px;
 }
+
+p.contact-description {
+    text-align: center;;
+}
+
 .reachout-button {
     display: inline-block;
     margin-top: 2rem;
@@ -385,21 +442,6 @@ Purpose:
     width: 100%;
 }
 
-.experience-list {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.experience-item {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #ccc;
-}
-
-.experience-location {
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
 
 ul {
     padding-left: 1.5rem;

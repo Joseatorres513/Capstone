@@ -54,6 +54,7 @@ h1, h2, h3 {
     font-weight: 600;
     color: #111;
     margin-bottom: 10px;
+    justify-content: center;
 }
 
 /* Paragraphs */

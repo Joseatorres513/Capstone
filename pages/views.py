@@ -12,6 +12,10 @@ def about_view(request):
 def experience_view(request):
     return render(request, 'pages/experience.html')  # You’ll need this template
 
+def online_store_view(request):
+    return render(request, 'online_store/index.html')
+
+
 def contact_view(request):
     if request.method == "POST":
         form = ContactForm(request.POST)

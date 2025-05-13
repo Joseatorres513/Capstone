@@ -8,4 +8,5 @@ urlpatterns = [
     path("contact/", views.contact_view, name="contact"),       # Contact form submission (POST)
     path("contact_form/", views.contact_form_view, name="contact_form"),  # Optional form renderer
     path("testing_page/", views.testing_view, name="testing_page"),  # Dev/testing route
+    path("online_store/", views.online_store_view, name="online_store"),  # Online Store Page   
 ]
