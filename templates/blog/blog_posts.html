@@ -1,0 +1,30 @@
+{% extends 'blog/blog_base.html' %}
+
+{% load static %}
+
+{% block title %}Posts{% endblock title %}
+
+{% block content %}
+<div class="intro">
+    <div class="basketball"></div>
+    <h1 class="intro-text">Explore <span>All Blog Posts</span></h1>
+    <p class="intro-subtext">Game recaps, player analysis, and behind-the-scenes stories.</p>
+</div>
+
+<!-- Image Section -->
+<div class="lebron-section">
+    <img src="{% static 'img/basketball-court.jpg' %}" alt="Basketball Court" class="lebron-image">
+    <p class="lebron-caption">"Every game has a story. Let’s tell it."</p>
+</div>
+
+<!-- Post Buttons Section -->
+<div class="container mt-5 text-center">
+    <h2 class="mb-4">📚 Featured Posts</h2>
+    <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="#" class="btn btn-outline-warning px-4 py-2">🏀 LeBron’s Legacy</a>
+        <a href="#" class="btn btn-outline-warning px-4 py-2">🔥 Game 7 Breakdown</a>
+        <a href="#" class="btn btn-outline-warning px-4 py-2">🧠 Court Strategy 101</a>
+        <a href="#" class="btn btn-outline-warning px-4 py-2">📈 Player Progress Tracker</a>
+    </div>
+</div>
+{% endblock content %}
