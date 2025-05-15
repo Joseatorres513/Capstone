@@ -7,4 +7,4 @@ def blog_posts(request):
     return render(request, 'blog/posts.html')
 
 def blog_contact(request):
-    return render(request, 'blog/contact.html')
+    return render(request, 'blog/blog_about.html')
