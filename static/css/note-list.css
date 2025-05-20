@@ -4,7 +4,7 @@ note-list.css
 --------------------------
 Purpose:
 - Layout and styling for Note list UI
-- Modernized to match 117's design: fonts, colors, shadows
+- Modernized design: fonts, colors, shadows
 ==========================
 */
 
@@ -63,7 +63,7 @@ Purpose:
     color: var(--primary-color);
 }
 
-/* New Button Style: Orange Buttons */
+/* Orange Buttons */
 
 .orange-btn {
     all: unset; /* reset ALL styles */

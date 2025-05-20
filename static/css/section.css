@@ -337,7 +337,6 @@ p.experience-location {
 .contact-item {
     background-color: #fff;
     color: #333;
-    /* Or use var(--primary-color) */
     padding: 0.5rem 1rem;
     border-left: 4px solid orange;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
