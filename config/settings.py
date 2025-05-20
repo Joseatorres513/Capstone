@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'online_store',
     'users',
     'blog',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -164,3 +165,27 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+
+
+# AWS S3 Configuration
+
+AWS_ACCESS_KEY_ID=env("AWS_KEY")
+AWS_SECRET_ACCESS_KEY=env("AWS_SECRET")
+AWS_STORAGE_BUCKET_NAME=env("AWS_BUCKET")
+AWS_S3_REGION_NAME="us-east-1"
+AWS_QUERYSTRING_AUTH=False
+
+#DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+MEDIA_URL = f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/"
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = "public-read"
+
+STORAGES = { 
+    "default": {
+        "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+    },    
+    "staticfiles": {
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+    },
+}
